@@ -1,3 +1,4 @@
+
 def encode(pas):
     new = []
     for char in pas:
@@ -7,6 +8,18 @@ def encode(pas):
         else:
             new.append(str(current_char))
     return ''.join(new)
+
+def decode(pas):
+    new = []
+    for char in pas:
+        current_char = int(char) - 3
+        if current_char < 0:
+            new.append(str(current_char + 10))
+        else:
+            new.append(str(current_char))
+    return ''.join(new)
+
+
 def main():
     print("Welcome to the (De/En)coder!")
     print("----------------------------")
